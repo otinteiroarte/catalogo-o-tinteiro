@@ -8,13 +8,25 @@
     "instagram": "otinteiro",
     "antecedenciaDias": 15,
     "unidadesPorLote": 100,
-    "papeis": ["Branco texturizado", "Marfim texturizado"],
+    "papeis": [
+      "Branco texturizado",
+      "Marfim texturizado"
+    ],
     "frete": {
       "modo": "combinar",
       "aviso": "O frete é combinado pelo WhatsApp depois do pedido."
+    },
+    "privacidade": {
+      "atualizadaEm": "2026-11-13",
+      "prazoAnexosMeses": 6
     }
   },
-  "categorias": ["Borda Arredondada", "Borda Reta", "Borda Rendada", "Cantoneira"],
+  "categorias": [
+    "Borda Arredondada",
+    "Borda Reta",
+    "Borda Rendada",
+    "Cantoneira"
+  ],
   "produtos": [
     {
       "id": "santinho-borda-arredondada",
