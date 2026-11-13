@@ -1,0 +1,30 @@
+{
+  "name": "tinteiro-checkout",
+  "private": true,
+  "description": "Pagamento (Mercado Pago), frete (Melhor Envio) e imagens dos clientes do site O Tinteiro.",
+  "scripts": {
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4"
+  },
+  "cloudflare": {
+    "bindings": {
+      "MP_ACCESS_TOKEN": {
+        "description": "Access Token do Mercado Pago. Comece pelo de teste: mercadopago.com.br/developers → Suas integrações → sua aplicação → Credenciais de teste."
+      },
+      "MELHOR_ENVIO_TOKEN": {
+        "description": "Token do Melhor Envio com permissão de cotar frete, gerado no painel do Melhor Envio, em Integrações."
+      },
+      "MELHOR_ENVIO_USER_AGENT": {
+        "description": "Escreva: O Tinteiro (seguido do e-mail de contato da loja entre parênteses). Exigência do Melhor Envio."
+      },
+      "ANEXOS": {
+        "description": "Espaço onde ficam as imagens que os clientes anexam no site. É criado automaticamente."
+      },
+      "SITE_URL": {
+        "description": "Endereços do site (já preenchido). Só mude se o site trocar de endereço."
+      }
+    }
+  }
+}

@@ -13,8 +13,17 @@
       "Marfim texturizado"
     ],
     "frete": {
-      "modo": "combinar",
-      "aviso": "O frete é combinado pelo WhatsApp depois do pedido."
+      "modo": "melhorenvio",
+      "aviso": "O frete é calculado pelo Melhor Envio a partir do seu CEP.",
+      "avisoSemCalculo": "O frete é calculado pelo Melhor Envio e combinado pelo WhatsApp depois do pedido.",
+      "cepOrigem": "",
+      "pacote": {
+        "unidades": 30,
+        "pesoKg": 0,
+        "larguraCm": 0,
+        "alturaCm": 0,
+        "comprimentoCm": 0
+      }
     },
     "privacidade": {
       "atualizadaEm": "2026-11-13",

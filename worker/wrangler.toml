@@ -1,0 +1,24 @@
+# Função de pagamento, frete e imagens d'O Tinteiro (Cloudflare Worker).
+# Pode ser instalada pelo botão "Deploy to Cloudflare" (o espaço R2 das imagens é criado junto)
+# ou com `npx wrangler deploy` nesta pasta.
+name = "tinteiro-checkout"
+main = "checkout.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+# Endereços do site aceitos: a prévia e o site definitivo. O site informa qual é o seu.
+SITE_URL = "https://otinteiroarte.github.io/catalogo-o-tinteiro/previa,https://otinteiroarte.github.io/catalogo-o-tinteiro"
+# Dias que as imagens enviadas pelos clientes ficam guardadas (o aviso de privacidade promete até 6 meses).
+ANEXOS_DIAS = "180"
+
+# Espaço das imagens próprias dos clientes.
+[[r2_buckets]]
+binding = "ANEXOS"
+bucket_name = "tinteiro-anexos"
+
+# Uma vez por dia, às 6h (UTC), a função apaga as imagens mais antigas que ANEXOS_DIAS.
+[triggers]
+crons = ["0 6 * * *"]
+
+# As chaves secretas NÃO ficam aqui (veja .dev.vars.example):
+#   MP_ACCESS_TOKEN, MELHOR_ENVIO_TOKEN, MELHOR_ENVIO_USER_AGENT e, se usar, TURNSTILE_SECRET.

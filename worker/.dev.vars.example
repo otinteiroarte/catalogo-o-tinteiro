@@ -1,0 +1,7 @@
+# Chaves que a loja informa na instalação (ficam secretas na Cloudflare).
+# Access Token do Mercado Pago: comece pelo de TESTE (Suas integrações → credenciais de teste).
+MP_ACCESS_TOKEN=""
+# Token do Melhor Envio com permissão de cotar frete (painel → Integrações).
+MELHOR_ENVIO_TOKEN=""
+# Nome da aplicação e e-mail de contato da loja, exigido pelo Melhor Envio.
+MELHOR_ENVIO_USER_AGENT="O Tinteiro (email-da-loja@exemplo.com)"
