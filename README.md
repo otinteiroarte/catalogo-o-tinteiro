@@ -1,11 +1,9 @@
 # O Tinteiro — catálogo
 
-Site: https://josejunior21.github.io/catalogo-o-tinteiro/
+Site: https://otinteiroarte.github.io/catalogo-o-tinteiro/
 
-Versão de produção compilada a partir do projeto atualizado no Google AI Studio em 20/10/2026.
+Site da loja feito em React + Vite (código-fonte mantido fora deste repositório). A raiz traz a versão publicada para os clientes; `previa/` traz a versão de teste (fora do Google, com `noindex`); `worker/` traz a função do carrinho para o botão "Deploy to Cloudflare" (pagamento pelo Mercado Pago, frete pelo Melhor Envio e anexos de imagem).
 
-GitHub Pages: branch `main`, pasta `/ (root)`.
+Enquanto o pagamento não estiver ligado, os pedidos seguem pelo WhatsApp.
 
-Alterações feitas no AI Studio precisam ser exportadas, compiladas e publicadas novamente. Este repositório não está sincronizado automaticamente com o Studio.
-
-O Painel da Loja salva alterações apenas no navegador (localStorage); elas não atualizam o catálogo de todos os visitantes. Para uma mudança pública, atualize o projeto e publique uma nova versão. Pedidos seguem pelo WhatsApp.
+GitHub Pages: branch `main`, pasta `/ (root)`. O site anterior (feito no Google AI Studio) continua no histórico deste repositório.
