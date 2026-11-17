@@ -1,0 +1,74 @@
+# Painel de edição do site O Tinteiro (Pages CMS — app.pagescms.org).
+# FASE DE TESTE: edita só a prévia (previa/produtos.json). Depois de aprovado, trocar
+# "previa/produtos.json" por "produtos.json" e "previa/assets/canva" por "assets/canva".
+media:
+  input: previa/assets/canva
+  output: assets/canva
+  extensions: [jpg, jpeg, png, webp]
+
+content:
+  - name: catalogo
+    label: Santinhos e loja
+    type: file
+    path: previa/produtos.json
+    format: json
+    fields:
+      - name: produtos
+        label: Santinhos
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{titulo}"
+        fields:
+          - { name: titulo, label: "Nome do santinho", type: string, required: true }
+          - { name: id, label: "Código interno (não mudar depois de publicado; só letras minúsculas e hífens)", type: string, required: true }
+          - { name: categoria, label: "Categoria (igual a uma da lista de categorias)", type: string }
+          - { name: precoUnitario, label: "Preço por unidade (R$; use ponto, ex. 2.5)", type: number, required: true }
+          - { name: selo, label: "Selo do cartão (ex. 30 Unidades · R$ 75)", type: string }
+          - { name: imagem, label: "Foto do santinho (recortada)", type: image }
+          - { name: descricao, label: "Descrição", type: text }
+          - { name: oracao, label: "Oração do verso", type: text }
+          - { name: especificacoes, label: "Especificações", type: string }
+          - { name: disponivel, label: "Disponível para venda", type: boolean }
+          - { name: destaque, label: "Em destaque", type: boolean }
+      - name: categorias
+        label: Categorias
+        type: string
+        list: true
+      - name: loja
+        label: Dados da loja
+        type: object
+        fields:
+          - { name: nome, label: "Nome", type: string }
+          - { name: assinatura, label: "Assinatura", type: string }
+          - { name: fundacao, label: "Ano de fundação", type: string }
+          - { name: cidade, label: "Cidade", type: string }
+          - { name: whatsapp, label: "WhatsApp (só números, com 55 e DDD)", type: string }
+          - { name: instagram, label: "Instagram (sem @)", type: string }
+          - { name: antecedenciaDias, label: "Antecedência mínima (dias)", type: number }
+          - { name: unidadesPorLote, label: "Unidades por pacote", type: number }
+          - { name: papeis, label: "Papéis", type: string, list: true }
+          - name: frete
+            label: Frete
+            type: object
+            fields:
+              - { name: modo, label: "Modo (não mudar)", type: string }
+              - { name: aviso, label: "Aviso com cálculo", type: text }
+              - { name: avisoSemCalculo, label: "Aviso sem cálculo", type: text }
+              - { name: cepOrigem, label: "CEP de origem", type: string }
+              - name: pacote
+                label: Pacote
+                type: object
+                fields:
+                  - { name: unidades, label: "Unidades por pacote", type: number }
+                  - { name: pesoKg, label: "Peso (kg)", type: number }
+                  - { name: larguraCm, label: "Largura (cm)", type: number }
+                  - { name: alturaCm, label: "Altura (cm)", type: number }
+                  - { name: comprimentoCm, label: "Comprimento (cm)", type: number }
+          - name: privacidade
+            label: Aviso de privacidade
+            type: object
+            fields:
+              - { name: atualizadaEm, label: "Atualizado em (AAAA-MM-DD)", type: string }
+              - { name: prazoAnexosMeses, label: "Prazo dos anexos (meses)", type: number }
