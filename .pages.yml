@@ -1,8 +1,7 @@
 # Painel de edição do site O Tinteiro (Pages CMS — app.pagescms.org).
-# FASE DE TESTE: edita só a prévia (previa/produtos.json). Depois de aprovado, trocar
-# "previa/produtos.json" por "produtos.json" e "previa/assets/canva" por "assets/canva".
+# Edita o site principal (produtos.json e assets/canva). A prévia (previa/) não é editada pelo painel.
 media:
-  input: previa/assets/canva
+  input: assets/canva
   output: assets/canva
   extensions: [jpg, jpeg, png, webp]
 
@@ -10,7 +9,7 @@ content:
   - name: catalogo
     label: Santinhos e loja
     type: file
-    path: previa/produtos.json
+    path: produtos.json
     format: json
     fields:
       - name: produtos
