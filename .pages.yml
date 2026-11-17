@@ -24,8 +24,8 @@ content:
           - { name: titulo, label: "Nome do santinho", type: string, required: true }
           - { name: id, label: "Código interno (não mudar depois de publicado; só letras minúsculas e hífens)", type: string, required: true }
           - { name: categoria, label: "Categoria (igual a uma da lista de categorias)", type: string }
-          - { name: precoUnitario, label: "Preço por unidade (R$; use ponto, ex. 2.5)", type: number, required: true }
-          - { name: selo, label: "Selo do cartão (ex. 30 Unidades · R$ 75)", type: string }
+          - { name: precoUnitario, label: "PREÇO: valor de 1 santinho em R$, com ponto (2.5 = R$ 2,50). O site multiplica pelas unidades do pacote: 2.5 × 30 = R$ 75. Para o pacote sair a R$ 76, use 2.5333", type: number, required: true }
+          - { name: selo, label: "Selo (não mostra preço e não muda valor). Comece com Mais Pedido para pôr o santinho em destaque na abertura", type: string }
           - { name: imagem, label: "Foto do santinho (recortada)", type: image }
           - { name: descricao, label: "Descrição", type: text }
           - { name: oracao, label: "Oração do verso", type: text }
@@ -47,7 +47,7 @@ content:
           - { name: whatsapp, label: "WhatsApp (só números, com 55 e DDD)", type: string }
           - { name: instagram, label: "Instagram (sem @)", type: string }
           - { name: antecedenciaDias, label: "Antecedência mínima (dias)", type: number }
-          - { name: unidadesPorLote, label: "Unidades por pacote", type: number }
+          - { name: unidadesPorLote, label: "Unidades por pacote (multiplica o preço de cada santinho)", type: number }
           - { name: papeis, label: "Papéis", type: string, list: true }
           - name: frete
             label: Frete
