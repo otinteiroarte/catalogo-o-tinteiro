@@ -1,0 +1,14 @@
+{
+  "name": "O Tinteiro · Papelaria fina & criativa",
+  "short_name": "O Tinteiro",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#1C261A",
+  "theme_color": "#1C261A",
+  "lang": "pt-BR",
+  "icons": [
+    { "src": "assets/marca/icone-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/marca/icone-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
